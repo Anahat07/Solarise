@@ -1,0 +1,135 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.page {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+#page1 {
+    display: block; /* Show the first page by default */
+    background-image: url('1.png'); /* Replace with your background image */
+}
+
+#timmyPage2 {
+    background-image: url('3.png'); /* Replace with Timmy's background image */
+}
+
+#timmyPage3 {
+    background-image: url('5.png'); /* Replace with Timmy's background image */
+}
+
+#timmyPage4 {
+    background-image: url('7.png'); /* Replace with Timmy's background image */
+}
+
+#lilyPage2 {
+    background-image: url('2.png'); /* Replace with Lily's background image */
+}
+
+#lilyPage3 {
+    background-image: url('4.png'); /* Replace with Lily's background image */
+}
+
+#lilyPage4 {
+    background-image: url('6.png'); /* Replace with Timmy's background image */
+}
+
+#endPage {
+    background-image: url('8.png'); /* Replace with the end background image */
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.choice-btn {
+    display: inline-block; /* Display buttons inline */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 600px; /* Adjust as needed */
+    margin-right: 20px; /* Adjust spacing between buttons */
+}
+
+.content {
+    text-align: center; /* Center align the content */
+}
+
+.arrow {
+    display: block;
+    margin: 20px auto;
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+
+#home {
+    display: block; /* Make the button a block-level element */
+    margin: 20px auto 0; /* Center the button horizontally and adjust the vertical spacing */
+    padding: 15px 25px;
+    background-color: #D3B369; /* Background color */
+    font-family: 'Roboto', sans-serif; /* Font family */
+    border: 2px solid #fff; /* Border style and color */
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 10px; /* Rounded corners */
+    transition: background-color 0.3s; /* Transition for background color */
+    margin-top: 200px; /* Adjust the top margin */
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}

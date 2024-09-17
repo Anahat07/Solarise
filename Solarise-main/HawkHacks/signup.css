@@ -1,0 +1,231 @@
+body {
+    background-color: #14509F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    height: 650px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #FFE289;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .left-side {
+    width: 50%;
+  }
+  
+  .right-side {
+    width: 40%;
+    background-color: #14509F;
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+  }
+  
+  .right-side img {
+    width: 500;
+    height: 600;
+    margin-bottom: 10px;
+  }
+
+  .right-side p {
+    font-size: 0.8rem;
+    color: #14509F;
+    margin-top: 10px;
+  }
+  
+  #signbutton {
+    color: #14509F;
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin-bottom: 200px;
+  }
+  
+  #signbutton:hover {
+    text-decoration: underline;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #14509F;
+  }
+  
+  p {
+    font-size: 0.8rem;
+    color: #14509F;
+    margin-top: 20px;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #14509F;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="address"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    width: calc(100% - 22px); 
+}
+  
+  button[type="button"] {
+    width: 95%;
+    padding: 10px;
+    background-color: #14509F;
+    color: #FFE289;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-align: center;
+    border: none;
+   /*margin-bottom: 20px;*/
+
+  }
+
+  .radio-container {
+    display: flex;
+  }
+  
+  .radio-container input[type="radio"],
+  .radio-container label {
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px
+  }
+
+  button[type="submit"] {
+    width: 80%;
+    padding: 5px;
+    background-color:#14509F;
+    color: #FFE289;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-align: center;
+    border: none;
+    margin-left: 30px;
+    /*margin-bottom: 300px;*/
+
+  }
+
+  button[type="button"] {
+    width: 80%;
+    padding: 5px;
+    background-color:#FFE289;
+    color: #14509F;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-align: center;
+    border: none;
+    margin-left: 30px;
+    /*margin-bottom: 300px;*/
+
+  }
+  
+  a {
+    color: #14509F;
+    text-decoration: none;
+    font-size: 0.8rem;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+.right-side img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 1000px;
+  height: auto;
+  margin: 0 auto; /* Center horizontally */
+  display: block; /* Ensures margin: 0 auto works */
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    background-color: #14509F;
+    border: none;
+   }
+   
+   .btn:hover,
+   .btn:focus,
+   .btn:active,
+   .btn.active {
+    color: #14509F;
+    background-color: #14509F;
+    outline: 0;
+   }
+   
+   .btn:active,
+   .btn.active {
+    background-image: none;
+    outline: 0;
+   }
+   
+   .btn.disabled,
+   .btn[disabled],
+   fieldset[disabled] .btn {
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: 0.65;
+   }
+
+   #CommunityText {
+    color: #FFE289;
+    margin-top: 200px;
+
+   }
+
+   #HaveAccount {
+    color: #FFE289;
+    font-size: 80;
+    margin-bottom:40px;
+   }

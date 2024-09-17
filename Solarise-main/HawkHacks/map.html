@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
+    <meta name="robots" content="noindex"/>
+    <link rel="stylesheet" href="map-style.css">
+    <title>Solarise</title>
+    <!-- JavaScript Libraries -->
+    <script src="Solar-API-Components/gc_solar_api_library/global.js" defer></script>
+    <script src="Solar-API-Components/gc_solar_api_library/geotiff.js" defer></script>
+    <script src="Solar-API-Components/gc_solar_api_library/solar_api.js" defer></script>
+    <script src="Solar-API-Components/gc_solar_api_library/maps.js" defer></script>
+    <script src="Solar-API-Components/geotiff/geotiff.js" defer></script>
+    <script src="Solar-API-Components/proj4/proj4.js" defer></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlWD_gLmvHBji8ZX8OHNKrYQj_DrrDwVY&loading=async&callback=onGoogleMapsLoaded&libraries=maps,marker&v=beta" defer></script>
+</head>
+
+<body>
+
+    <header class="banner">
+        <h1 class="side-by-side">Solarise</h1>
+        <div class="banner-right side-by-side"><a class="ai" href=" http://localhost:3000">Chat with Beamy!</a></div>
+        <div class="banner-right side-by-side"><a class="results" href="results.html">Results</a></div>
+        <div class="banner-right side-by-side"><a class="main" href="adult-main.html">Home</a></div>
+    </header>
+
+    <!--Address Search Bar-->
+    <main>
+        <div class="address-container">
+            <div class="address">
+                <label>Address: </label>
+            </div>
+            <div class="address-input">
+                <input type="text" name="property_address_input" id="property_address_input">
+            </div>
+            <div class="address-button">
+                <button onclick="getLatLong();">Get Solar Data</button>
+            </div>
+        </div>
+    </main>
+
+    <!--Google Map-->
+    <div class="google_map_container">
+        <div id="map" class="google_map"></div>
+        <div id="canvas_div"></div>
+    </div>
+
+    <!--Google Solar API Controls-->
+    <div class="Controls">
+        
+        <div id="overlayControlsSelect">
+            <label for="overlaySelect">Select Layer:</label><br/>
+            <select id="overlaySelect">
+                <option value="0">DSM</option>
+                <option value="1">RGB</option>
+                <option value="2" selected>Annual Flux</option>
+                <option value="3">Monthly Flux</option>
+                <option value="4">Hourly Flux</option>
+            </select>
+        </div>
+
+        <div class="monthSelect">
+            <label for="monthSelection">Month: </label><label for="monthSlider"><span id="monthName">July</span></label><br/>
+            <input type="range" id="monthSlider" min="0" max="11" value="6" step="1">
+        </div>
+
+        <div class="hourSelect">
+            <label for="hourSlider">Select Hour: <span id="hourDisplay">12 PM</span></label><br/>
+            <input type="range" id="hourSlider" min="0" max="23" value="12" step="1">
+        </div>
+
+        <div class="overlaySelect">
+            <input type="checkbox" id="toggleAllOverlays" onclick="toggleAllOverlays()" checked> Display Overlay<br/>
+        </div>
+
+    </div>
+
+    <!--Google Solar API Bulding Insights-->
+    <div class="Data">
+        
+        <h2>Your Solar Data:</h2>
+        <div id="gsa_data"></div>
+
+        <div class="dataInputs">
+            <label for="system_modules_watts">Module output (watts):</label><br/>
+            <input type="number" name="system_modules_watts" id="system_modules_watts" value="395"><br/>
+            <label for="system_modules_range">Modules:</label><br/>
+            <input type="range" name="system_modules_range" id="system_modules_range" min="1" max="100">
+            <span id="modules_range_display_qty"></span>
+        </div>
+        
+        <div class="Output">
+            <p>Total Output:<br/>
+                <span id="modules_calculator_display"></span>
+            </p>
+        </div>
+
+        <div class="Definitions">
+            <li id="moduleDef">Max Module: This represents the highest power output a solar panel can generate under ideal conditions, helping buyers understand the panel's peak performance potential.</li><br/>
+            <li id="sunDef">Annual Sunshine: It signifies the average amount of sunlight received per day in a specific location, aiding in estimating the solar energy generation potential throughout the year for accurate system sizing.</li><br/>
+            <li id="roofDef">Roof Area: Refers to the available space on a roof where solar panels can be installed, crucial for determining the number of panels that can be accommodated to maximize energy production.</li><br/>
+            <li id="outputDef">Module Output: It reflects the actual power output of solar panels under real-world conditions, accounting for factors like temperature and shading to provide a more accurate estimation of energy production.</li><br/>
+            <li id="totalDef">Total Output: Represents the cumulative energy production of the solar panel system over a specific period, essential for evaluating the system's performance, return on investment, and contribution to energy savings and sustainability goals.</li><br/>
+        </div>
+    
+    </div>
+
+</body>
+
+</html>

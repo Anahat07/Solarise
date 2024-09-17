@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Efficiency Adventure</title>
+    <link rel="stylesheet" href="main-style.css">
+</head>
+<body>
+    <div id="page1" class="page">
+        <div class="content">
+            <button class="choice-btn" onclick="chooseCharacter('lily')">Journey with Lily</button>
+            <button class="choice-btn" onclick="chooseCharacter('timmy')">Journey with Timmy</button>
+        </div>
+    </div>
+
+    <!-- Timmy's Pages -->
+    <div id="timmyPage2" class="page hidden">
+        <div class="content">
+            <button class="choice-btn" onclick="makeChoice('timmyPage2', 'option1')">Turn off the lights</button>
+            <button class="choice-btn" onclick="makeChoice('timmyPage2', 'option2')">Leave the lights on</button>
+            <img src="arrow.png" class="arrow" onclick="goToPage('timmyPage3')">
+        </div>
+    </div>
+    <div id="timmyPage3" class="page hidden">
+        <div class="content">
+            <button class="choice-btn" onclick="makeChoice('timmyPage3', 'option1')">Open the windows</button>
+            <button class="choice-btn" onclick="makeChoice('timmyPage3', 'option2')">Use the air conditioner</button>
+            <img src="arrow.png" class="arrow" onclick="goToPage('timmyPage4')">
+        </div>
+    </div>
+    <div id="timmyPage4" class="page hidden">
+        <div class="content">
+            <button class="choice-btn" onclick="makeChoice('timmyPage4', 'option1')">Short Shower</button>
+            <button class="choice-btn" onclick="makeChoice('timmyPage4', 'option2')">Long Shower</button>
+            <img src="arrow.png" class="arrow" onclick="goToPage('endPage')">
+        </div>
+    </div>
+
+    <!-- Lily's Pages -->
+    <div id="lilyPage2" class="page hidden">
+        <div class="content">
+            <button class="choice-btn" onclick="makeChoice('lilyPage2', 'option1')">Turn off the lights</button>
+            <button class="choice-btn" onclick="makeChoice('lilyPage2', 'option2')">Leave the lights on</button>
+            <img src="arrow.png" class="arrow" onclick="goToPage('lilyPage3')">
+        </div>
+    </div>
+    <div id="lilyPage3" class="page hidden">
+        <div class="content">
+            <button class="choice-btn" onclick="makeChoice('lilyPage3', 'option1')">Use a fan</button>
+            <button class="choice-btn" onclick="makeChoice('lilyPage3', 'option2')">Use the heater</button>
+            <img src="arrow.png" class="arrow" onclick="goToPage('lilyPage4')">
+        </div>
+    </div>
+    <div id="lilyPage4" class="page hidden">
+        <div class="content">
+            <button class="choice-btn" onclick="makeChoice('lilyPage4', 'option1')">Short Shower</button>
+            <button class="choice-btn" onclick="makeChoice('lilyPage4', 'option2')">Long Shower</button>
+            <img src="arrow.png" class="arrow" onclick="goToPage('endPage')">
+        </div>
+    </div>
+
+    <!-- Common End Page -->
+    <div id="endPage" class="page hidden">
+        <div class="content">
+            <a href="kid-main.html" id="Home">Go Back to Home!</a>
+        </div>
+    </div>
+
+    <!-- Modal for feedback -->
+    <div id="feedbackModal" class="modal hidden">
+        <div class="modal-content" id="modalContent">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="feedbackText"></p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

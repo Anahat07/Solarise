@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('sun.jpeg'); /* Replace with your image path */
+    background-size: cover; /* Adjusts the size to cover the entire area */
+    background-position: center; /* Centers the image */
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 150px;
+    color: #14509F;
+    margin-top: 50px;
+}
+
+.screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 40px); /* Subtract header height */
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+#chat-box {
+    height: 400px;
+    width: 500px;
+    overflow-y: scroll;
+    border: 1px solid #14509F;
+    padding: 10px;
+    margin-bottom: 35px;
+    border-radius: 5px; /* Rounded corners */
+}
+
+#user-input {
+    width: calc(100% - 90px); /* Adjusted width for button */
+    padding: 10px;
+    border: 1px solid #14509F;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+#send-btn {
+    padding: 10px 20px;
+    background-color: #14509F;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition */
+    margin-top: 15px;
+}
+
+#send-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

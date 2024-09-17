@@ -1,0 +1,142 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color:  #FFE289;
+    ;
+
+}
+
+header {
+    font-family: 'sans-serif', roboto;
+    background-color: #fff;
+    text-align: center;
+    font-size: 25px;
+}
+
+h1 {
+    background-color:  #FFE289;
+    font-family: 'sans-serif', roboto;
+    color: #14509F;
+
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #14509F;
+
+
+}
+
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#image-container {
+    position: relative;
+}
+
+#image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+#grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns as needed */
+    grid-template-rows: repeat(4, 1fr); /* Adjust the number of rows as needed */
+    color: #14509F;
+
+}
+
+
+
+footer {
+    display: none;
+    flex-direction: column; /* Ensure elements are stacked vertically */
+    justify-content: center;
+    align-items: center;
+    height: 150px; /* Adjust the height to fit content */
+    background-color: #FFE289;
+}
+
+footer h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #14509F;
+    white-space: normal; /* Allow wrapping of text */
+    max-width: 80%; /* Set max-width to control the wrapping */
+
+}
+
+.arrow-icon {
+    width: 50px; /* Set a width for the arrow icon */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.cell {
+    border: 2px solid #fff; /* Adjust border style */
+    background-color: rgba(0, 0, 0, 0.2); /* Adjust background color */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+    position: relative; /* Ensure the parent cell has a non-static position */
+}
+
+.cell:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust hover background color */
+}
+
+/* Add styles for correct cells */
+.correct {
+    background-color: green; /* Change background color for correct cells */
+}
+
+/* Add styles for selected cells */
+.selected {
+    border-color: blue; /* Change border color for selected cells */
+}
+
+.correct-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: green;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #14509F; 
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #072143; 
+    transform: scale(1.05); 
+}
+
+.home-button:active {
+    background-color: #072143; 
+}
+
+

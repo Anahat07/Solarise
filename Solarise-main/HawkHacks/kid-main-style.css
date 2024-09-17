@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Glacial Indifference', sans-serif;
+}
+
+body {
+    font-family: 'Glacial Indifference', sans-serif;
+    color: #fff;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+.banner {
+    position: absolute;
+    top: 5vh;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    padding-left: 40px;
+    font-family: 'Glacial Indifference', sans-serif;
+    font-size: 25px;
+    z-index: 10;
+}
+
+.banner h1{
+    font-weight: bold;
+    font-size: 45px;
+}
+
+.banner-right {
+    float: right;
+    margin: auto;
+    color: #fff;
+    margin-right: 4vh;
+    font-family: 'Glacial Indifference', sans-serif;
+}
+
+.side-by-side {
+    display: inline-block;
+}
+
+.banner a {
+    color: #14509F;
+    background-color: #FFE289;
+    text-decoration: none;
+    font-family: 'Glacial Indifference', sans-serif;
+    padding: 3vh;
+    text-align: center;
+    font-size: 3vh;
+    margin: 1vh;
+    border-radius: 12px;
+    border: 2px solid #fff;
+}
+
+.banner a:hover {
+    background-color: #ffe189b1;
+}
+
+main {
+    padding-top: 20vh;
+    background-image: url('kid-bg-image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    min-height: 120vh;
+}
+
+.title {
+    color: #fff;
+    margin-top: 18vh;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(10, 2, 2, 2);
+    letter-spacing: 2px;
+}

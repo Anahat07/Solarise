@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.8">
+    <link rel="stylesheet" href="survey.css">
+
+    <title>Solarise Survey</title>
+</head>
+    <body>
+        <div class = "Survey-Container">
+            <form id = "surveyForm">
+                <h1>Welcome to Solarise, Sunny!</h1>
+                <h2> We're thrilled to help you transition to a sustainable, clean energy source! </h2>
+                <h3> Please let us know more about your goals below. </h3>
+
+                <label for="AnnualBillQ">What is your annual budget?</label><br>
+                <select name="Annual Bill" id="annualBill">
+                    <option value="10000-20000">$10000-$20000</option>
+                    <option value="20000-30000">$20900-$30000</option>
+                    <option value="30000-40000">$30000-$40000</option>
+                    <option value="40000-50000">$40000-$50000</option>
+                    <option value="50000 plus">$50000+</option>
+                </select><br><br>
+
+                <label for="BillQ">What was your most recent annual energy bill?</label><br>
+                <textarea name="Bill" id="bill" row="1" cols="20"></textarea><br><br>
+
+                <label for="GrantQ">Are you registered for the Canada Greener Homes Grant?</label><br>
+                <input type="radio" name="Grant" value="Registered"> Yes, I am registered<br>
+                <input type="radio" name="Grant" value="Not registered"> No, I am not registered<br>
+                <input type="radio" name="Grant" value="Applied"> I have applied and am waiting for a response<br>
+
+                <label for="NetMeteringQ">Are you registered for any net metering programs?</label><br>
+                <input type="radio" name="NetMetering" value="Registered"> Yes, I am registered<br>
+                <input type="radio" name="NetMetering" value="Not registered"> No, I am not registered<br>
+                <input type="radio" name="NetMetering" value="Applied"> I have applied and am waiting for a response<br>
+
+                <input type="submit" value="Next">
+
+            </form>
+        </div>
+        <script>
+            document.getElementById("surveyForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent the default form submission
+    
+                // Redirect to another page (replace 'next-page.html' with your desired URL)
+                window.location.href = "grants.html";
+            });
+        </script>
+    </body>
+
+</html>

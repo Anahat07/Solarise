@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-=1.0">
+    <title>HeartCare Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script>
+        function validateLogin() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Retrieve user data from localStorage
+            var storedUsername = localStorage.getItem('username');
+            var storedPassword = localStorage.getItem('password');
+
+            // Check if the entered username and password match the stored data
+            if (username === storedUsername && password === storedPassword) {
+                alert('Login successful!');
+                //Redirect to the login page after saving user info
+                window.location.href = "adult-main.html";
+            } else {
+                alert('Incorrect username or password. Try again or sign up with us today!');
+            }
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="logo">Log in to your account</h1>
+        <form class="login-form" onsubmit="validateLogin(); return false;">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button onclick = "validateLogin()" type="submit">Sign In</button>
+        </form>
+        <div class="links">
+            <label for="newHere">Are you new here?</label>
+            <span>|</span>
+            <a href="signup.html">Register</a>
+        </div>
+    </div>
+</body>
+</html>

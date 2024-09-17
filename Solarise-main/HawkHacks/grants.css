@@ -1,0 +1,63 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #FFE289;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for overall content */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Container for grant section */
+.grant-container {
+    text-align: center;
+}
+
+/* Header style */
+h2, h3 {
+    font-size: 24px;
+    color: #14509F;
+    margin-top: 50px;
+}
+
+/* Content style */
+.grant-content, .net-metering-content {
+    font-size: 18px;
+    color: #14509F;
+    margin-top: 30px;
+}
+
+/* Button style */
+.grant-button, .net-metering-button, .next-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #14509F;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover style */
+.grant-button:hover, .net-metering-button:hover, .next-button:hover {
+    background-color: #001531;
+}
+
+/* Style for the next button to always be at the bottom */
+.next-button {
+    margin-bottom: 10;
+}

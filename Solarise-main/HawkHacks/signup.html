@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="signup.css" />
+  
+  <script>
+    // Function to save user information in Local Storage
+    function saveUserInfo(event) {
+      event.preventDefault(); // Prevent form from submitting immediately
+      var email = document.getElementById('email').value;
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('pwd').value;
+      var address = document.getElementById('address').value;
+      var type = document.getElementById('type').value;
+      var province = document.getElementById('province').value;
+
+      localStorage.setItem('email', email);
+      localStorage.setItem('username', username);
+      localStorage.setItem('password', password);
+      localStorage.setItem('address', address);
+      localStorage.setItem('type', type);
+      localStorage.setItem('province', province);
+
+      // Redirect to the login page after saving user info
+      window.location.href = "login.html";
+    }
+
+    // Function to load user information from Local Storage and prefill the form fields
+    function loadUserInfo() {
+      var email = localStorage.getItem('email');
+      var username = localStorage.getItem('username');
+      var address = localStorage.getItem('address');
+      var password = localStorage.getItem('password');
+      var type = localStorage.getItem('type');
+      var province = localStorage.getItem('province');
+
+      if (email) document.getElementById('email').value = email;
+      if (username) document.getElementById('username').value = username;
+      if (address) document.getElementById('address').value = address;
+      if (password) document.getElementById('pwd').value = password;
+      if (type) document.getElementById('type').value = type;
+      if (province) document.getElementById('province').value = province;
+    }
+
+    // Call loadUserInfo when the page loads
+    window.onload = function() {
+      loadUserInfo();
+    };
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="left-side">
+      <h1>Hello!</h1>
+      <p>Please sign up to continue.</p>
+      <form action="login.html" method="post" onsubmit="saveUserInfo(event)">
+        <div class="form-container">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required />
+
+          <label for="pwd">Password</label>
+          <input type="password" id="pwd" name="pwd" required />
+
+          <label for="cpwd">Confirm Password</label>
+          <input type="password" id="cpwd" name="cpwd" required />
+
+          <label for="address">Address [Address, City, Province] </label>
+          <input type="text" id="address" name="address" required />
+
+          <label for="type">Type</label>
+          <select name="Type" id="type" required>
+            <option value="Business">Business</option>
+            <option value="Household">Household</option>
+            <option value="Public Service">Public Service</option>
+          </select><br><br>
+
+          <label for="province">Province/Territory</label>
+          <select name="Province" id="province" required>
+            <option value="Ontario">Ontario</option>
+            <option value="Quebec">Quebec</option>
+            <option value="Manitoba">Manitoba</option>
+            <option value="Saskatchewan">Saskatchewan</option>
+            <option value="Alberta">Alberta</option>
+            <option value="British Colombia">British Colombia</option>
+            <option value="New Brunswick">New Brunswick</option>
+            <option value="Prince Edward Island">Prince Edward Island</option>
+            <option value="Nova Scotia">Nova Scotia</option>
+            <option value="Newfoundland & Labrador">Newfoundland & Labrador</option>
+            <option value="Yukon Territories">Yukon Territories</option>
+            <option value="Northwest Territories">Northwest Territories</option>
+            <option value="Nunavut">Nunavut</option>
+          </select><br><br>
+
+          <button type="submit">Sign Up</button>
+        </div>
+      </form>
+    </div>
+    <div class="right-side">
+      <div class="darkPanel"></div>
+      <h2 id="CommunityText">Welcome to Solarise!</h2>
+      <img src="beamy.png" />
+      <div class="sign-in" style="color:black;">
+        <span>
+          <div>
+            <p id="HaveAccount">Already have an account?</p>
+          </div>
+        </span>
+        <button type="button" id="signbutton" onclick="window.location.href='login.html'">Sign In</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
